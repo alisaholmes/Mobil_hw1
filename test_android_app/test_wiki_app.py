@@ -32,5 +32,5 @@ def test_search_java():
         results = browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title'))
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Java'))
-   # with allure.step('Клик на первый результат'):
-       # browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title')).first.click()
+    with allure.step('Клик на первый результат'):
+        browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title')).first.click()
