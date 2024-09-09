@@ -24,9 +24,9 @@ def test_search():
 @allure.label('owner', 'Alisa Holmes')
 @allure.feature('Найти статью о "Java"')
 @allure.story('Поиск статьи')
-def test_search_java(mobile_management):
+def test_search_java():
     with allure.step('Ввести в поиск значение "Java"'):
-        browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).click()
+        browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type('Java')
     with allure.step('Проверить найденное значение'):
         results = browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title'))
