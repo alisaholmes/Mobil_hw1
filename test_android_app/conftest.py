@@ -7,6 +7,7 @@ import os
 from dotenv import load_dotenv
 from utils import attach
 
+
 @pytest.fixture(scope='session', autouse=True)
 def load_env():
     load_dotenv()
