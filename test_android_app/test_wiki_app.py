@@ -24,7 +24,7 @@ def test_search():
 @allure.label('owner', 'Alisa Holmes')
 @allure.feature('Найти статью о "HTML"')
 @allure.story('Поиск статьи')
-def test_search_html():
+def test_search_html(mobile_management):
     with allure.step('Ввести в поиск значение "HTML"'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Search Wikipedia')).click()
         browser.element((AppiumBy.ID,'org.wikipedia.alpha:id/search_src_text')).type('HTML')
